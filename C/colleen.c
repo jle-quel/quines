@@ -1,19 +1,19 @@
 #include <stdio.h>
 
 /*
-	Commentaire
+	Comment
 */
 
-static inline void function(void)
+int function(void)
 {
+	char *str = "#include <stdio.h>%1$c%1$c/*%1$c%2$cComment%1$c*/%1$c%1$cint function(void)%1$c{%1$c%2$cchar *str = %3$c%4$s%3$c;%1$c%2$creturn printf(str, 0xa, 0x9, 0x22, str);%1$c}%1$c%1$cint main(void)%1$c{%1$c%2$c/*%1$c%2$c%2$cComment%1$c%2$c*/%1$c%2$creturn function();%1$c}%1$c";
+	return printf(str, 0xa, 0x9, 0x22, str);
 }
 
 int main(void)
 {
 	/*
-		Commentaire
+		Comment
 	*/
-	function();
-	char *str = "#include <stdio.h>%1$c%1$c/*%1$c%2$cCommentaire%1$c*/%1$c%1$cstatic inline void function(void)%1$c{%1$c}%1$c%1$cint main(void)%1$c{%1$c%2$c/*%1$c%2$c%2$cCommentaire%1$c%2$c*/%1$c%2$cfunction();%1$c%2$cchar *str = %3$c%4$s%3$c;%1$c%2$cprintf(str, 0xa, 0x9, 0x22, str);%1$c}%1$c";
-	printf(str, 0xa, 0x9, 0x22, str);
+	return function();
 }
