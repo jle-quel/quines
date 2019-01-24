@@ -30,7 +30,7 @@ _main:
 	call _dprintf
 	add rsp, 64
 
-	mov rdi, r10
+	mov rdi, r12
 	mov rax, CLOSE
 	syscall
 	jc error
